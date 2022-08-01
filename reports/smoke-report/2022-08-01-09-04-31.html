@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Result</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-08-01 09:03:39</p>
+                <p class='attribute'><strong>Duration: </strong>51.597s</p>
+                <p class='attribute'><strong>Status: </strong>Pass: 1, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>smoke-report</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class='success'>
+                                <td class="col-xs-9">test_search_tee (searchtests.SearchTests)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-success">
+                                        
+                                            Pass
+                                        
+                                    </span>
+                                    
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class='warning'>
+                                <td class="col-xs-9">test_search_salt_shaker (searchtests.SearchTests)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-warning">
+                                        
+                                            Error
+                                        
+                                    </span>
+                                    
+                                        &nbsp<button class="btn btn-default btn-xs">View</button>
+                                    
+                                </td>
+                            </tr>
+                            
+                                <tr style="display:none;">
+                                    <td class="col-xs-9">
+                                        <p>NoSuchElementException</p>
+                                        <p>Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="top"]/body/div[1]/div[2]/div[2]/div/div[2]/div[1]/div[4]/ul/li[1]/div/h2/a"}
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+#0 0x559bc7b8bcd3 <unknown>
+#1 0x559bc7993968 <unknown>
+#2 0x559bc79cafd7 <unknown>
+#3 0x559bc79cb1a1 <unknown>
+#4 0x559bc79fe154 <unknown>
+#5 0x559bc79e8bdd <unknown>
+#6 0x559bc79fbea8 <unknown>
+#7 0x559bc79e8aa3 <unknown>
+#8 0x559bc79be3fa <unknown>
+#9 0x559bc79bf555 <unknown>
+#10 0x559bc7bd32bd <unknown>
+#11 0x559bc7bd7418 <unknown>
+#12 0x559bc7bbd36e <unknown>
+#13 0x559bc7bd8078 <unknown>
+#14 0x559bc7bb1bb0 <unknown>
+#15 0x559bc7bf4d58 <unknown>
+#16 0x559bc7bf4ed8 <unknown>
+#17 0x559bc7c0ecfd <unknown>
+#18 0x7f210b630ea7 <unknown>
+</p>
+                                    </td>
+                                </tr>
+                            
+                        
+                        <tr>
+                            <td>
+                               Total Test Runned: 2
+                            </td>
+                            <td>
+                                <span>Pass: 1, Error: 1</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>
